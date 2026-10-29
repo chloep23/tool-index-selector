@@ -1,0 +1,14 @@
+{
+ "labels": {
+  "r01": "send_email",
+  "r02": "send_email",
+  "r03": "create_event",
+  "r04": "create_event",
+  "r05": "convert_currency",
+  "r06": "convert_currency",
+  "r07": "resize_image",
+  "r08": "resize_image",
+  "r09": "translate_text",
+  "r10": "translate_text"
+ }
+}

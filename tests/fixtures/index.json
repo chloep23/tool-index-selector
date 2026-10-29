@@ -1,0 +1,254 @@
+{
+ "entries": [
+  {
+   "name": "send_email",
+   "description": "Send an email to one or more recipients with a subject and a body",
+   "tier": 5
+  },
+  {
+   "name": "create_event",
+   "description": "Add a new event to the calendar with a title, a date and a start time",
+   "tier": 5
+  },
+  {
+   "name": "convert_currency",
+   "description": "Convert an amount of money from one currency to another at today's rate",
+   "tier": 5
+  },
+  {
+   "name": "resize_image",
+   "description": "Change an image's width and height in pixels, keeping its file format",
+   "tier": 5
+  },
+  {
+   "name": "translate_text",
+   "description": "Translate a passage of text from one language into another",
+   "tier": 5
+  },
+  {
+   "name": "send_email_draft",
+   "description": "Save an email as a draft without sending it to anyone",
+   "tier": 10
+  },
+  {
+   "name": "create_event_reminder",
+   "description": "Set a reminder to fire before an event already in the calendar",
+   "tier": 10
+  },
+  {
+   "name": "convert_units",
+   "description": "Convert a measurement between units of length, weight, volume or temperature",
+   "tier": 10
+  },
+  {
+   "name": "resize_video",
+   "description": "Change a video's frame width and height, keeping its length and format",
+   "tier": 10
+  },
+  {
+   "name": "translate_document",
+   "description": "Translate an uploaded document file into another language, keeping its layout",
+   "tier": 10
+  },
+  {
+   "name": "send_sms",
+   "description": "Send a short text message to a phone number",
+   "tier": 20
+  },
+  {
+   "name": "schedule_email",
+   "description": "Send an email at a chosen later time instead of now",
+   "tier": 20
+  },
+  {
+   "name": "cancel_event",
+   "description": "Remove an event from the calendar and tell the people invited",
+   "tier": 20
+  },
+  {
+   "name": "move_event",
+   "description": "Change the date or start time of an event already in the calendar",
+   "tier": 20
+  },
+  {
+   "name": "currency_rate",
+   "description": "Look up the exchange rate between two currencies without converting an amount",
+   "tier": 20
+  },
+  {
+   "name": "historical_rate",
+   "description": "Look up the exchange rate between two currencies on a past date",
+   "tier": 20
+  },
+  {
+   "name": "crop_image",
+   "description": "Cut an image down to a chosen region and discard the rest",
+   "tier": 20
+  },
+  {
+   "name": "rotate_image",
+   "description": "Turn an image a quarter, a half or three quarters of a turn",
+   "tier": 20
+  },
+  {
+   "name": "detect_language",
+   "description": "Say which language a passage of text is in, without translating it",
+   "tier": 20
+  },
+  {
+   "name": "transcribe_audio",
+   "description": "Write out the words spoken in an audio file as text",
+   "tier": 20
+  },
+  {
+   "name": "email_signature",
+   "description": "Set the signature put at the bottom of outgoing email",
+   "tier": 50
+  },
+  {
+   "name": "email_filter",
+   "description": "Make a rule that files incoming email into a folder",
+   "tier": 50
+  },
+  {
+   "name": "mark_email_read",
+   "description": "Mark an email in the mailbox as read or unread",
+   "tier": 50
+  },
+  {
+   "name": "search_email",
+   "description": "Find email matching words, a sender or a range of dates",
+   "tier": 50
+  },
+  {
+   "name": "export_calendar",
+   "description": "Write the calendar out to a file other calendar apps can read",
+   "tier": 50
+  },
+  {
+   "name": "share_calendar",
+   "description": "Let another person see your calendar",
+   "tier": 50
+  },
+  {
+   "name": "event_attendees",
+   "description": "List the people invited to an event already in the calendar",
+   "tier": 50
+  },
+  {
+   "name": "free_slots",
+   "description": "Find the times in a day with nothing in the calendar",
+   "tier": 50
+  },
+  {
+   "name": "currency_format",
+   "description": "Write a number as currency text for display, such as 1234.5 as $1,234.50",
+   "tier": 50
+  },
+  {
+   "name": "round_amount",
+   "description": "Round an amount of money to a chosen number of decimal places",
+   "tier": 50
+  },
+  {
+   "name": "split_bill",
+   "description": "Divide a total amount evenly between a number of people",
+   "tier": 50
+  },
+  {
+   "name": "tax_amount",
+   "description": "Work out the tax due on an amount at a given rate",
+   "tier": 50
+  },
+  {
+   "name": "compress_image",
+   "description": "Make an image file smaller in bytes without changing its width or height",
+   "tier": 50
+  },
+  {
+   "name": "convert_image_format",
+   "description": "Change an image from one file format to another, keeping its size",
+   "tier": 50
+  },
+  {
+   "name": "image_metadata",
+   "description": "Read an image's width, height, format and the date it was made",
+   "tier": 50
+  },
+  {
+   "name": "remove_background",
+   "description": "Cut the background out of an image, leaving the subject",
+   "tier": 50
+  },
+  {
+   "name": "thumbnail_sheet",
+   "description": "Lay several images out as small previews on one sheet",
+   "tier": 50
+  },
+  {
+   "name": "spell_check",
+   "description": "Find misspelt words in a passage of text and suggest corrections",
+   "tier": 50
+  },
+  {
+   "name": "summarise_text",
+   "description": "Shorten a passage of text to its main points",
+   "tier": 50
+  },
+  {
+   "name": "count_words",
+   "description": "Count the words, lines and characters in a passage of text",
+   "tier": 50
+  },
+  {
+   "name": "text_to_speech",
+   "description": "Read a passage of text aloud and save it as an audio file",
+   "tier": 50
+  },
+  {
+   "name": "translate_subtitles",
+   "description": "Translate the subtitle track of a video into another language",
+   "tier": 50
+  },
+  {
+   "name": "format_date",
+   "description": "Write a date in a chosen format, such as 2026-03-02 as 2 March 2026",
+   "tier": 50
+  },
+  {
+   "name": "timezone_convert",
+   "description": "Give the time in another time zone for a moment in this one",
+   "tier": 50
+  },
+  {
+   "name": "create_task",
+   "description": "Add an item to the to-do list with a title and a due date",
+   "tier": 50
+  },
+  {
+   "name": "complete_task",
+   "description": "Mark an item on the to-do list as done",
+   "tier": 50
+  },
+  {
+   "name": "upload_file",
+   "description": "Put a file into cloud storage and give back a link to it",
+   "tier": 50
+  },
+  {
+   "name": "share_file",
+   "description": "Let another person open a file in cloud storage",
+   "tier": 50
+  },
+  {
+   "name": "zip_files",
+   "description": "Put several files into one compressed archive",
+   "tier": 50
+  },
+  {
+   "name": "scan_document",
+   "description": "Turn a photograph of a page into a document file",
+   "tier": 50
+  }
+ ]
+}

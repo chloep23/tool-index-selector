@@ -1,0 +1,44 @@
+{
+ "requests": [
+  {
+   "id": "r01",
+   "text": "Priya needs the quarterly figures in her inbox before she leaves today, subject line Q1 numbers."
+  },
+  {
+   "id": "r02",
+   "text": "Let everyone on the team know by email that the office is closed on Friday."
+  },
+  {
+   "id": "r03",
+   "text": "Hold 2pm Thursday for the design review. It is not on my calendar yet."
+  },
+  {
+   "id": "r04",
+   "text": "I have a dentist appointment on 12 May at 9am that needs to go in the diary."
+  },
+  {
+   "id": "r05",
+   "text": "If I changed 240 euros into yen today, what would I get back?"
+  },
+  {
+   "id": "r06",
+   "text": "1,500 Canadian dollars, what is that in pounds at the moment?"
+  },
+  {
+   "id": "r07",
+   "text": "This photo has to come out 800 wide and 600 tall for the site, still a PNG, nothing cropped off."
+  },
+  {
+   "id": "r08",
+   "text": "Shrink the logo to 128 by 128. Same file type, same picture, just smaller dimensions."
+  },
+  {
+   "id": "r09",
+   "text": "Here is a paragraph I typed out. I need it in Portuguese."
+  },
+  {
+   "id": "r10",
+   "text": "A few sentences came through in Korean. What do they say in English?"
+  }
+ ]
+}

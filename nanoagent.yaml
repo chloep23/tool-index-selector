@@ -1,0 +1,78 @@
+_ > nanoagent.plugin.v0001.ManifestConfig:
+id: tool-index-selector
+name: Tool Index Selector
+version: 0.1.0
+status: ready
+spec: nanoagent.plugin/v0001
+
+runtime > nanoagent.plugin.v0001.RuntimeConfig:
+  type: mcp_stdio
+  command: [uv, run, --frozen, python, -m, plugin]
+
+permissions > nanoagent.plugin.v0001.PermissionsConfig:
+  network > nanoagent.plugin.v0001.NetworkConfig:
+    hosts: []
+  filesystem > nanoagent.plugin.v0001.FilesystemConfig:
+    write: [workspace]
+
+# One entry per contract.Tool; its input and output classes are contract.TOOLS's.
+tools > dict[contract.Tool, nanoagent.plugin.v0001.ToolConfig]:
+  read_task:
+    description: "Read a task's two files in one call: the tool index at the size asked for, each entry a name and a one-line description, and every request to answer"
+  report_picks:
+    description: Merge the picks it is given into this run's reports/<run>/picks.json and return the merged report so far, which the agent submits once every request is answered
+  answer_key:
+    description: Give the labelled tool for every request, the one entry of the smallest index that handles it
+  search_index:
+    description: Rank the entries of a named index, at a given size, by how many of a query's words appear in their name or description, most shared words first
+
+# One entry per contract.Task; its input class is contract.TASKS's.
+tasks > dict[contract.Task, nanoagent.plugin.v0001.TaskConfig]:
+  select-5:
+    description: Pick the one tool that handles each request, choosing from an index of 5 tools
+    runner: agent
+    tools: [read_task, report_picks, search_index]
+    reference: answer_key
+    instructions: |-
+      Index. read_task gives you this task's index, 5 entries, each a name and one line saying what it does, and every request to answer. Size is 5: pass the task's size through exactly as given.
+      Picking. For each request, pick the one entry whose line covers what is asked. Exactly one entry does. Read the whole line, not the name: entries differ by a single qualifier, so a draft is not a send, a reminder is not a new event, units are not currency, a video is not an image, and a document file is not a passage of text.
+      Traps. Some entries share words with a request and do something else. Sharing a word is not doing the job. search_index only counts words shared and cannot tell them apart, so what it puts first is often wrong.
+      Plan. Three tool calls, one per step, nothing else: (1) read_task, with the task input copied exactly as given; (2) report_picks once, with one pick per request; (3) submit. Reason briefly: one short line per request, no prose.
+      Reporting. report_picks takes task (the task input, copied exactly as given) and picks, one entry per request with the request's id and the tool's name exactly as the index writes it. Answer every request, and answer each one once.
+      Submit. When a call returns complete true, call submit with that call's report exactly as returned (task, run, picks), changing nothing. Call submit itself; never write a summary in its place.
+  select-10:
+    description: Pick the one tool that handles each request, choosing from an index of 10 tools
+    runner: agent
+    tools: [read_task, report_picks, search_index]
+    reference: answer_key
+    instructions: |-
+      Index. read_task gives you this task's index, 10 entries, each a name and one line saying what it does, and every request to answer. Size is 10: pass the task's size through exactly as given.
+      Picking. For each request, pick the one entry whose line covers what is asked. Exactly one entry does. Read the whole line, not the name: entries differ by a single qualifier, so a draft is not a send, a reminder is not a new event, units are not currency, a video is not an image, and a document file is not a passage of text.
+      Traps. Some entries share words with a request and do something else. Sharing a word is not doing the job. search_index only counts words shared and cannot tell them apart, so what it puts first is often wrong.
+      Plan. Three tool calls, one per step, nothing else: (1) read_task, with the task input copied exactly as given; (2) report_picks once, with one pick per request; (3) submit. Reason briefly: one short line per request, no prose.
+      Reporting. report_picks takes task (the task input, copied exactly as given) and picks, one entry per request with the request's id and the tool's name exactly as the index writes it. Answer every request, and answer each one once.
+      Submit. When a call returns complete true, call submit with that call's report exactly as returned (task, run, picks), changing nothing. Call submit itself; never write a summary in its place.
+  select-20:
+    description: Pick the one tool that handles each request, choosing from an index of 20 tools
+    runner: agent
+    tools: [read_task, report_picks, search_index]
+    reference: answer_key
+    instructions: |-
+      Index. read_task gives you this task's index, 20 entries, each a name and one line saying what it does, and every request to answer. Size is 20: pass the task's size through exactly as given.
+      Picking. For each request, pick the one entry whose line covers what is asked. Exactly one entry does. Read the whole line, not the name: entries differ by a single qualifier, so a draft is not a send, a reminder is not a new event, units are not currency, a video is not an image, and a document file is not a passage of text.
+      Traps. Some entries share words with a request and do something else. Sharing a word is not doing the job. search_index only counts words shared and cannot tell them apart, so what it puts first is often wrong.
+      Plan. Three tool calls, one per step, nothing else: (1) read_task, with the task input copied exactly as given; (2) report_picks once, with one pick per request; (3) submit. Reason briefly: one short line per request, no prose.
+      Reporting. report_picks takes task (the task input, copied exactly as given) and picks, one entry per request with the request's id and the tool's name exactly as the index writes it. Answer every request, and answer each one once.
+      Submit. When a call returns complete true, call submit with that call's report exactly as returned (task, run, picks), changing nothing. Call submit itself; never write a summary in its place.
+  select-50:
+    description: Pick the one tool that handles each request, choosing from an index of 50 tools
+    runner: agent
+    tools: [read_task, report_picks, search_index]
+    reference: answer_key
+    instructions: |-
+      Index. read_task gives you this task's index, 50 entries, each a name and one line saying what it does, and every request to answer. Size is 50: pass the task's size through exactly as given.
+      Picking. For each request, pick the one entry whose line covers what is asked. Exactly one entry does. Read the whole line, not the name: entries differ by a single qualifier, so a draft is not a send, a reminder is not a new event, units are not currency, a video is not an image, and a document file is not a passage of text.
+      Traps. Some entries share words with a request and do something else. Sharing a word is not doing the job. search_index only counts words shared and cannot tell them apart, so what it puts first is often wrong.
+      Plan. Three tool calls, one per step, nothing else: (1) read_task, with the task input copied exactly as given; (2) report_picks once, with one pick per request; (3) submit. Reason briefly: one short line per request, no prose.
+      Reporting. report_picks takes task (the task input, copied exactly as given) and picks, one entry per request with the request's id and the tool's name exactly as the index writes it. Answer every request, and answer each one once.
+      Submit. When a call returns complete true, call submit with that call's report exactly as returned (task, run, picks), changing nothing. Call submit itself; never write a summary in its place.

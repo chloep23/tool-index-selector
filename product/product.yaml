@@ -1,0 +1,19 @@
+_ > nanoagent.plugin.v0001.ProductConfig:
+tagline: "How well an agent finds the right tool, and what a bigger toolbox costs"
+summary: >-
+  Tool Index Selector asks the same ten everyday requests four times over, against a list of 5
+  tools, then 10, then 20, then 50. The small lists are contained in the big ones and every right
+  answer is in the smallest, so the correct pick never changes and the only thing growing is the
+  number of ways to get it wrong: names a single word apart, descriptions that differ by one
+  qualifier, and entries that share a request's words while doing something else entirely. Four
+  scores come back, and the gap between them is the measurement.
+highlights:
+  - "The same right answer at every size, so the four scores can be compared directly"
+  - "Distractors built to catch the shortcuts: near-duplicate names and shared keywords"
+  - "Says which request went wrong and what the right tool was, not just a number"
+  - "Reads only the files you point it at, and reaches no network at all"
+steps:
+  - "Put your index, requests and labels, as JSON, in the plugin's folder"
+  - "Ask for the picks at one index size, or run all four"
+  - "It reads the index and the requests, then answers each request once"
+  - "You get a pick per request and a score that is the share picked correctly"
